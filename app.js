@@ -20,7 +20,8 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
-    
+
+// mongoose.connect("mongodb://localhost/yelp_camp_dynamic_price");    
 mongoose.connect("mongodb+srv://AmanSaurav:qweRTY12!@mongodbatlas@cluster0.qqq7h.mongodb.net/yelp_camp_dynamic_price?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
 	useCreateIndex: true

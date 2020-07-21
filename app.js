@@ -21,16 +21,8 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 
-mongoose.connect(process.env.DATABASEURL);    
-// mongoose.connect("mongodb+srv://AmanSaurav:qweRTY12!@mongodbatlas@cluster0.qqq7h.mongodb.net/yelp_camp_dynamic_price?retryWrites=true&w=majority", {
-// 	useNewUrlParser: true,
-// 	useCreateIndex: true
-// }).then(() => {
-// 	console.log("Connected to DB!");
-// }).catch(err => {
-// 	console.log("error:", err.message);
-// });
-
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_dynamic_price"
+mongoose.connect(url);    
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
